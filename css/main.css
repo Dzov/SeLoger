@@ -1,0 +1,116 @@
+
+@font-face {
+  src: url('../fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf');
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/**************** **************** **************** **************** /
+    /****************  ------GENERAL STYLES------****************  /
+/**************** **************** **************** ****************/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  background: url("../Img/cover.jpg") no-repeat center 33% fixed;
+  background-size: 112%;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+main {
+  height: 100vh; 
+}
+
+fieldset {
+  border: none; 
+}
+
+li {
+  list-style-type: none; 
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/*
+img {
+  width: 100%;
+  height: auto; 
+}
+
+*/
+
+/**************** **************** **************** **************** /
+    /****************  ------HEADER------****************  /
+/**************** **************** **************** ****************/
+
+#mainHeader {
+  background-color: #E00034; 
+  color: white;
+  padding: 7px 25px;
+}
+
+#headerNav {
+  width: 30%; 
+}
+
+
+
+/**************** **************** **************** **************** /
+    /****************  ------FIRST SECTION------****************  /
+/**************** **************** **************** ****************/
+
+
+#slogan {
+  color: white; 
+  text-align: center;
+}
+
+#mainFieldset {
+  background-color: white; 
+  padding: 40px 20px;
+}
+
+#mainFieldset input {
+  padding: 13px;
+  background-color: #EEEEEE; 
+  border-radius: 3px; 
+  border: 1px solid lightgrey;
+}
+
+#villeInp {
+  width: 280px;
+}
+
+
+#subField2 {
+  margin: 20px 0;
+}
+
+#subField2 label {
+  background-color: #EEE;
+}
+
+#subField2 input {
+  display: inline-block;
+}
+
+
+/**************** **************** **************** **************** /
+    /****************  ------SECOND SECTION------****************  /
+/**************** **************** **************** ****************/
+
+
+
+/**************** **************** **************** **************** /
+    /****************  ------FOOTER------****************  /
+/**************** **************** **************** ****************/
+
+

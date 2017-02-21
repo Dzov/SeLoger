@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SeLoger</title>
+  <link rel="stylesheet" type="text/css" href="css/flex.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+  <header id="mainHeader" class="flex spaceBtw">
+    <p><a href="">Déposer une annonce</a></p>
+    <nav id="headerNav">
+      <ul class="flex spaceBtw">
+        <li><a href="">Acheter</a></li>
+        <li><a href="">Louer</a></li>
+        <li><a href="">Construire</a></li>
+        <li><a href="">Emprunter</a></li>
+        <li><a href="">Emménager</a></li>
+        <li><a href="">Vendre</a></li>
+      </ul>
+    </nav>
+    <p><a href="">Mes favoris</a></p>
+  </header>
+
+  <main>
+    <section id="landingSection" class="flex flexColumn alignItemsCenter">
+      <a href=""><img id="seLogerIcon" src="Img/seloger-Icon.svg" alt="Icone SeLoger" width="120px" height="50px" ></a>
+      <div id="slogan" class="flex flexColumn">
+        <h1>1 235 752 annonces immobilières</h1>
+        <h2>Et vous, que cherchez-vous ?</h2>
+      </div>
+      <form id="mainForm">
+        <button class="formTab">Louer</button>
+        <button class="formTab">Acheter</button>
+        <button class="formTab">Vendre</button>
+        <fieldset id="mainFieldset" class="flex flexColumn spaceAround">
+          <fieldset id="subField1">
+            <input id="villeInp" type="text" name="ville" placeholder="Saisissez une ville, un quartier ...">
+            <input id="budgetInp" type="text" name="budget" placeholder="Budget max">
+          </fieldset>
+          <fieldset id="subField2">
+            <input id="maisonCheck" type="checkbox" name="maison">
+            <label for="maisonCheck">Maison</label>
+            <input id="appartCheck" type="checkbox" name="appartement">
+            <label for="appartCheck">Appartement</label>
+            <button> + </button>
+          </fieldset>
+          <button>Plus de critères > </button>
+        </fieldset>
+        <input type="submit" name="recherche" value="Rechercher">
+      </form>
+      <p>
+        Préparation, signature du bail et déménagement <br> V
+      </p>
+      <aside class="flex ">
+        <div class="stepCard">
+          <h3>Je me prépare</h3>
+          <ul>
+            <li>
+              <h4>Dossier de location</h4>
+              <p>Préparer votre dossier</p>
+            </li>
+            <li>
+              <h4>Mon guide</h4>
+              <p>Bien choisir ma location</p>
+            </li>
+          </ul>
+        </div>
+        <div class="stepCard">
+          <h3>Je signe mon bail</h3>
+          <ul>
+            <li>
+              <h4>Etat des lieux</h4>
+              <p>Ne rien négliger</p>
+            </li>
+            <li>
+              <h4>Assurance habitation</h4>
+              <p>Diagnostic quartier</p>
+            </li>
+            <li>
+              <h4>Trésorerie</h4>
+              <p>Simplifier mes finances</p>
+            </li>
+          </ul>
+        </div>
+        <div class="stepCard">
+          <h3>C'est parti, je déménage !</h3>
+          <ul>
+            <li>
+              <h4>Ma checklist</h4>
+              <p>Préparer mon déménagement</p>
+            </li>
+            <li>
+              <h4>Planifier</h4>
+              <p>Déménager serein</p>
+            </li>
+            <li>
+              <h4>Energie</h4>
+              <p>Comparer les offres</p>
+            </li>
+          </ul>
+        </div>
+      </aside>
+    </section> <!-- END Landing Section -->
+
+    <section id="conseilsSection">
+      <div>
+        <h1>LA LOCATION</h1>
+        <h2>CONSEILS <br>ET INSPIRATIONS</h2>
+        <h3>Suivez le guide pour votre projet</h3>
+      </div>
+      <aside class="flex flexColumn">
+        <div>
+          <h4>LIFESTYLE</h4>
+          <figure>
+            <img src="Img/maison_alternative.jpg">
+            <figcaption>Yourte, container, maison flottante... Quel type d'habitat alternatif est fait pour vous ?</figcaption>
+          </figure>
+        </div>
+        <div>
+          <h4>ACTUALITE</h4>
+          <figure>
+            <img src="Img/residence_etudiante_havre.jpg">
+            <figcaption>Résidences étudiantes : un marché porteur pour de nombreux investisseurs</figcaption>
+          </figure>
+        </div>
+        <div>
+          <h4>CONSEIL D'EXPERT</h4>
+          <figure>
+            <img src="Img/porte-fracturee.jpg">
+            <figcaption>Vous êtes locataire et votre porte a été fracturée. Que faire ?</figcaption>
+          </figure>
+        </div>
+        <button>Encore plus ></button>
+      </aside>
+    </section> <!-- END Conseils Section -->
+  </main>
+
+  <footer>
+    <section id="preFooter">
+      <p>SeLoger c'est aussi ...</p>
+      <nav>
+        <ul class="flex">
+          <li><a href=""><</a></li>
+          <li><a href=""><img src="Img/agites.svg"></a></li>
+          <li><a href=""><img src="Img/agorabiz.svg"></a></li>
+          <li><a href=""><img src="Img/bellesdemeures-black.svg"></a></li>
+          <li><a href=""><img src="Img/immostreet.svg"></a></li>
+          <li><a href=""><img src="Img/seloger-neuf-B.svg"></a></li>
+          <li><a href=""><img src="Img/webimm.svg"></a></li>
+          <li><a href="">></a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <section id="mainFooter">
+      
+    </section>
+  </footer>
+
+</body>
+</html>
