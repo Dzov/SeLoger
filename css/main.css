@@ -16,13 +16,18 @@
 
 body {
   height: 100%;
-  background: url("../Img/cover.jpg") no-repeat center 33% fixed;
-  background-size: 112%;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-main {
-  height: 100vh; 
+#background {
+  position: fixed;
+  top: -120px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("../Img/cover.jpg") center center no-repeat;
+  background-size: cover;
+  z-index: -1;
 }
 
 fieldset {
@@ -33,11 +38,10 @@ li {
   list-style-type: none; 
 }
 
-a {
+a, a:hover {
   text-decoration: none;
   color: inherit;
 }
-
 
 /*
 img {
@@ -54,63 +58,360 @@ img {
 #mainHeader {
   background-color: #E00034; 
   color: white;
-  padding: 7px 25px;
+  padding: 10px 25px;
+  font-size: 13.5px; 
 }
 
 #headerNav {
   width: 30%; 
 }
 
+#mainHeader p {
+  width: 25%;
+}
+
+#favoris {
+  font-weight: 600; 
+  text-align: right;
+}
 
 
 /**************** **************** **************** **************** /
     /****************  ------FIRST SECTION------****************  /
 /**************** **************** **************** ****************/
 
+#landingSection {
+  height: 100vh;
 
+}
+
+/* SLOGAN
+******************/
 #slogan {
   color: white; 
   text-align: center;
 }
 
+#slogan h1 {
+  font-size: 20px;
+  font-weight: 400; 
+  margin: 0; 
+}
+
+#slogan h2 {
+  font-size: 30px; 
+  font-weight: 200; 
+  margin: 0;
+  line-height: 35px; 
+}
+
+
+/* SEARCH FORM
+******************/
+
+#mainForm {
+  position: relative;
+  margin-top: 40px; 
+  margin-bottom: 5%;
+}
+
+.formTab {
+  background-color: #494949; 
+  color: white;
+  border: none;
+  padding: 12px 40px;
+  margin: 0;
+  font-weight: 800; 
+  font-size: 15px; 
+}
+
+#vendreTab {
+  border-top-right-radius: 4px; 
+}
+
+#acheterTab {
+  border-right: 1px solid rgba(0, 0, 0, .2); 
+  border-left: 1px solid rgba(0, 0, 0, .2); 
+}
+
+#louerTab {
+  border-top-left-radius: 4px; 
+}
+
+
 #mainFieldset {
   background-color: white; 
-  padding: 40px 20px;
+  padding: 40px 25px;
+  border-radius: 4px; 
+  height: 215px; 
 }
 
 #mainFieldset input {
-  padding: 13px;
+  padding: 13px; 
+}
+
+#mainFieldset input, 
+.subField2_bg {
   background-color: #EEEEEE; 
-  border-radius: 3px; 
-  border: 1px solid lightgrey;
+  border-radius: 4px; 
+  border: 1px solid #d9d9d9;
+}
+
+#subField1 {
+  position: relative;
 }
 
 #villeInp {
   width: 280px;
 }
 
+#euroSign {
+  position: absolute;
+  right: 6px; 
+  top: 13.5px;
+}
 
 #subField2 {
-  margin: 20px 0;
+  margin: 25px 0;
 }
 
-#subField2 label {
-  background-color: #EEE;
-}
-
-#subField2 input {
+.subField2_bg {
   display: inline-block;
+  width: 155px; 
+  padding: 8px;
+  margin-right: 5px;
+  border: none; 
 }
 
+.subField2_bg input, 
+.subField2_bg label {
+  margin: 0 2px 0 1px;
+  font-size: 11.5px; 
+  font-weight: 400; 
+}
+
+#subField2_btn {
+  width: 36px; 
+  height: 36px; 
+  border: 2px solid #EEE;
+  border-radius: 4px; 
+  background: url("../Img/plus.png") no-repeat center center;
+  background-size: 72%; 
+}
+
+#criteresBtn {
+  border: none;
+  font-size: 13px; 
+}
+
+#searchBtn {
+  border-bottom: ;
+  font-size: 15px; 
+  font-weight: 700; 
+  color: white;
+  background-color: #fcb200; 
+  border-radius: 4px; 
+  border: 2px solid #fcb200;
+  line-height: 18px; 
+  padding: 8px 20px; 
+  position: absolute;
+  right: 80px;
+  bottom: -20px; 
+}
+
+#searchBtn:hover {
+  background-color: #EA9D01; 
+  border: 2px solid #EA9D01;
+}
+
+#landingPage_footer {
+  font-size: 22px; 
+  font-weight: 100; 
+  padding: 20px;
+  position: absolute;
+  bottom: 0; 
+  text-align: center;
+  color: #333; 
+}
+
+/* STEPS CARDS
+******************/
+#stepsAsideSection {
+  margin-bottom: 80px; 
+}
+
+.stepCard {
+  background-color: white; 
+  border-radius: 3px; 
+  height: 410px; 
+  width: calc((70% / 3) - 15px) ;
+  padding: 10px;
+  margin: 10px;
+  transform: scale(1); 
+  transition: all .2s ease-in-out; 
+}
+
+.stepCard:hover {
+  transform: scale(1.05); 
+}
+
+
+.stepCard h3 {
+  border-bottom: 1px solid lightgrey; 
+  color: #E00034;
+  font-size: 18px;
+  font-weight: 200;  
+  text-align: center; 
+  padding: 15px;
+}
+
+.stepCard li {
+  padding: 25px 0 5px 50px  ; 
+}
 
 /**************** **************** **************** **************** /
     /****************  ------SECOND SECTION------****************  /
 /**************** **************** **************** ****************/
 
+#bgPic_container {
+ position: absolute;
+ bottom: 0; 
+ left: 15%; 
+}
 
+#conseilsSection {
+  background: url("../Img/edito-bg.jpg") no-repeat center center;
+  background-size: cover;
+  padding: 40px;
+  position: relative;
+}
+
+#conseil_h1 {
+  background-color: #E00034; 
+  color: white;
+  padding: 5px; 
+  float: left;
+  font-size: 30px; 
+}
+
+#conseil_h2 {
+  font-size: 40px; 
+  font-weight: 200; 
+  color: #444545; 
+}
+
+#conseil_h3 {
+  font-size: 16px;
+  font-weight: 200; 
+  color: #444545; 
+}
+
+.conseilCard {
+  width: 315px;
+  position: relative; 
+  margin-bottom: 20px; 
+}
+
+
+.conseilCard h4 {
+  background-color: #E00034; 
+  color: white;
+  font-size: 11px; 
+  padding: 5px; 
+  position: absolute;
+  top: 10px; 
+  left: 10px; 
+}
+
+.conseilCard img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 4px; 
+  border-top-right-radius: 4px; 
+}
+
+#conseilsSection button {
+  background-color: #494949; 
+  align-self: center;
+  line-height: 18px; 
+  padding: 8px 20px; 
+  border-radius: 4px; 
+  border:none;
+  color: white;
+  font-size: 12px; 
+}
+
+#conseilsSection button:hover {
+  background-color: #262626; 
+}
+
+#conseilsSection_aside figcaption{
+  background-color: white; 
+  padding: 20px 15px; 
+  border-bottom-left-radius: 4px; 
+  border-bottom-right-radius: 4px; 
+  font-size: 15px; 
+  line-height: 1.5; 
+}
 
 /**************** **************** **************** **************** /
     /****************  ------FOOTER------****************  /
 /**************** **************** **************** ****************/
+
+#preFooter {
+  background-color: #E6E6E6; 
+  align-items: center;
+}
+
+#preFooter_nav {
+  width: 65%; 
+  height: 100px; 
+}
+
+#preFooter_nav img {
+  width: 80%;
+  height: auto; 
+}
+
+#preFooter_nav ul {
+  align-content: center;
+}
+
+#preFooter p {
+  font-size: 20px; 
+  font-weight: 200; 
+  padding-top: 20px; 
+}
+
+#preFooter_previous, 
+#preFooter_next {
+  font-size: 40px; 
+  color: #444545;
+  margin: 0 20px; 
+}
+
+
+
+#mainFooter {
+  background-color: #3A3A3A;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
