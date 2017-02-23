@@ -2,7 +2,6 @@
 <html>
 <head>
   <title>SeLoger</title>
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
   <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="css/animate.css">
   <link rel="stylesheet" type="text/css" href="css/flex.css">
@@ -23,8 +22,10 @@
       </ul>
     </nav>
     <p id="favoris"><a href="">Mes favoris</a></p>
-  </header> <!-- END MAIN HEADER -->
+  </header> 
+  <!-- END MAIN HEADER -->
 
+  <!-- START MAIN SECTION -->
   <main>
     <div id="background"></div>
     <section id="landingSection" class="flex flexColumn alignItemsCenter">
@@ -33,35 +34,48 @@
         <h1>1 235 752 annonces immobilières</h1>
         <h2>Et vous, que cherchez-vous ?</h2>
       </div>
-      <form id="mainForm">
-        <div id="tabsContainer" class="flex justifyCenter">
-          <button id="louerTab" class="formTab activeTab">Louer</button>
-          <button id="acheterTab" class="formTab">Acheter</button>
-          <button id="vendreTab" class="formTab">Vendre</button>
-        </div>
-        <fieldset id="mainFieldset">
-          <fieldset id="subField1">
-            <input id="villeInp" type="text" name="ville" placeholder="Saisissez une ville, un quartier ...">
-            <input id="budgetInp" type="text" name="budget" placeholder="Budget max">
-            <span id="euroSign">€</span>
-          </fieldset>
-          <fieldset id="subField2" >
-            <div class="flex">
-              <div class="subField2_bg selfCenter">
-                <input id="maisonCheck" type="checkbox" name="maison">
-                <label for="maisonCheck">Maison</label>
+      <!-- Formulaire principal -->
+      <!-- <div id="formContainer"> -->
+
+        <form id="mainForm" class="animated active">
+          <div id="tabsContainer" class="flex justifyCenter">
+            <button id="louerTab" class="formTab activeTab" onclick="formTabs(mainForm, secondForm)">Louer</button>
+            <button id="acheterTab" class="formTab" onclick="formTabs(mainForm, secondForm)">Acheter</button>
+            <button id="vendreTab" class="formTab" onclick="formTabs(secondForm, mainForm)">Vendre</button>
+          </div>
+          <fieldset id="mainFieldset">
+            <fieldset id="subField1">
+              <input id="villeInp" type="text" name="ville" placeholder="Saisissez une ville, un quartier ...">
+              <input id="budgetInp" type="text" name="budget" placeholder="Budget max">
+              <span id="euroSign">€</span>
+            </fieldset>
+            <fieldset id="subField2" >
+              <div class="flex">
+                <div class="subField2_bg selfCenter">
+                  <input id="maisonCheck" type="checkbox" name="maison">
+                  <label for="maisonCheck">Maison</label>
+                </div>
+                <div class="subField2_bg selfCenter" >
+                  <input id="appartCheck" type="checkbox" name="appartement">
+                  <label for="appartCheck">Appartement</label>
+                </div>
+                <button id="subField2_btn" ></button>
               </div>
-              <div class="subField2_bg selfCenter" >
-                <input id="appartCheck" type="checkbox" name="appartement">
-                <label for="appartCheck">Appartement</label>
-              </div>
-              <button id="subField2_btn" ></button>
-            </div>
+            </fieldset>
+            <a id="criteresBtn" href="">Plus de critères > </a>
           </fieldset>
-          <a id="criteresBtn" href="">Plus de critères > </a>
-        </fieldset>
-        <input id="searchBtn" type="submit" name="recherche" value="Rechercher">
-      </form>
+          <input id="searchBtn" type="submit" name="recherche" value="Rechercher">
+        </form>
+
+        <form id="secondForm" class="animated">
+          <fieldset id="mainFieldset">
+              <h3>Estimez gratuitement votre bien</h3>
+              <input id="villeInp" type="text" name="ville" placeholder="Saisissez une ville, un quartier ...">
+          </fieldset>
+          <input id="searchBtn" type="submit" name="recherche" value="Rechercher">
+        </form>
+      <!-- </div> END formulaire principal -->
+
       <footer id="landingPage_footer">
         <p>
           Préparation, financement et déménagement
@@ -69,6 +83,7 @@
         <i class="fa fa-angle-down" aria-hidden="true"></i>
       </footer>
     </section> <!-- END Landing Section -->
+
     <aside id="stepsAsideSection" class="flex justifyCenter">
       <div class="stepCard">
         <h3>Je me prépare</h3>
@@ -117,8 +132,10 @@
           </li>
         </ul>
       </div>
-    </aside>
+    </aside> 
+      <!-- END PRIMARY SECTION -->
 
+      <!-- START SECONDARY SECTION -->
     <section id="conseilsSection" class="flex spaceAround">
       <div>
         <h1 id="conseil_h1">LA LOCATION</h1>
@@ -151,7 +168,9 @@
         <button>Encore plus ></button>
       </aside>
     </section> <!-- END Conseils Section -->
-  </main>  <!-- END MAIN SECTION -->
+  </main>  
+
+    <!-- END MAIN SECTION -->
 
   <footer>
     <section id="preFooter" class="flex flexColumn justifyCenter">
@@ -160,9 +179,9 @@
         <ul class="flex spaceBtw alignItemsCenter">
           <li id="preFooter_previous" class="selfCenter" ><i class="fa fa-angle-left" aria-hidden="true"></i></li>
           <li><a href=""><img src="Img/agites.svg" ></a></li>
-          <li><a href=""><img src="Img/agorabiz.svg"  ></a></li>
+          <li><a href=""><img src="Img/agorabiz.svg" ></a></li>
           <li><a href=""><img src="Img/bellesdemeures-black.svg" ></a></li>
-          <li><a href=""><img src="Img/immostreet.svg" > </a></li>
+          <li><a href=""><img src="Img/immostreet.svg" ></a></li>
           <li><a href=""><img src="Img/seloger-neuf-B.svg" ></a></li>
           <li><a href=""><img src="Img/webimm.svg" ></a></li>
           <li id="preFooter_next" class="selfCenter"><i class="fa fa-angle-right" aria-hidden="true"></i></li>
@@ -173,7 +192,9 @@
     <section id="mainFooter">
       
     </section>
-  </footer>
+  </footer> 
+
+    <!-- END FOOTER -->
 
   <script src="js/script.js"></script>
 </body>
