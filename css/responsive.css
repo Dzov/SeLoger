@@ -1,0 +1,11 @@
+@media all and (max-width: 1250px) {
+  #stepsAsideSection {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stepCard {
+    height: 300px;
+    width: 420px; 
+  }
+}

@@ -1,27 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
   <title>SeLoger</title>
   <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="css/animate.css">
   <link rel="stylesheet" type="text/css" href="css/flex.css">
   <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/responsive.css">
 </head>
 
-<body>
+<body onscroll="scroll()">
   <header id="mainHeader" class="flex spaceBtw">
     <p><a href="">Déposer une annonce</a></p>
     <nav id="headerNav">
       <ul class="flex spaceBtw">
-        <li><a href="">Acheter</a></li>
-        <li><a href="">Louer</a></li>
-        <li><a href="">Construire</a></li>
-        <li><a href="">Emprunter</a></li>
-        <li><a href="">Emménager</a></li>
-        <li><a href="">Vendre</a></li>
+        <li id="itemAcheter" onmouseover="menu('menu-acheter', 'itemAcheter')">Acheter</li>
+        <li id="itemLouer" onmouseover="menu('menu-louer', 'itemLouer')">Louer</li>
+        <li id="itemConstruire" onmouseover="menu('menu-construire', 'itemConstruire')">Construire</li>
+        <li id="itemEmprunter" onmouseover="menu('menu-emprunter', 'itemEmprunter')">Emprunter</li>
+        <li id="itemEmmenager" onmouseover="menu('menu-emmenager', 'itemEmmenager')">Emménager</li>
+        <li id="itemVendre" onmouseover="menu('menu-vendre', 'itemVendre')">Vendre</li>
       </ul>
     </nav>
     <p id="favoris"><a href="">Mes favoris</a></p>
+    
+    <!-- Menus déroulants -->
+    <menu id="menu-acheter" class="menu hidden" onmouseout="classList.add('hidden')">
+      <ul>
+        <li>
+          Acheter
+        </li>
+      </ul>
+    </menu>
+    <menu id="menu-louer" class="menu hidden" onmouseout="classList.add('hidden')">
+      <ul>
+        <li>
+          Louer
+        </li>
+      </ul>
+    </menu>
+    <menu id="menu-construire" class="menu hidden" onmouseout="classList.add('hidden')">
+      <ul>
+        <li>
+          Construire
+        </li>
+      </ul>
+    </menu>
+    <menu id="menu-emprunter" class="menu hidden" onmouseout="classList.add('hidden')">
+      <ul>
+        <li>
+          Emprunter
+        </li>
+      </ul>
+    </menu>
+    <menu id="menu-emmenager" class="menu hidden" onmouseout="classList.add('hidden')">
+      <ul>
+        <li>
+          Emmenager
+        </li>
+      </ul>
+    </menu>
+    <menu id="menu-vendre" class="menu hidden" onmouseout="classList.add('hidden')">
+      <ul>
+        <li>
+          Vendre
+        </li>
+      </ul>
+    </menu>
   </header> 
   <!-- END MAIN HEADER -->
 
@@ -29,23 +75,23 @@
   <main>
     <div id="background"></div>
     <section id="landingSection" class="flex flexColumn alignItemsCenter">
-      <a href=""><img id="seLogerIcon" src="Img/seloger-Icon.svg" alt="Icone SeLoger" width="140px" height="100px" ></a>
+      <a href=""><img id="seLogerIcon" src="Img/seloger-Icon.svg" alt="Icone SeLoger" width="140" height="100" ></a>
       <div id="slogan" class="flex flexColumn">
         <h1>1 235 752 annonces immobilières</h1>
         <h2>Et vous, que cherchez-vous ?</h2>
       </div>
       <!-- Formulaire principal -->
-      <!-- <div id="formContainer"> -->
-
-        <form id="mainForm" class="animated active">
-          <div id="tabsContainer" class="flex justifyCenter">
-            <button id="louerTab" class="formTab activeTab" onclick="formTabs(mainForm, secondForm)">Louer</button>
-            <button id="acheterTab" class="formTab" onclick="formTabs(mainForm, secondForm)">Acheter</button>
-            <button id="vendreTab" class="formTab" onclick="formTabs(secondForm, mainForm)">Vendre</button>
-          </div>
-          <fieldset id="mainFieldset">
+      
+      <div id="tabsContainer" class="flex justifyCenter">
+        <button id="louerTab" class="formTab activeTab" onclick="formTabs('mainForm', 'secondForm', 'louerTab')">Louer</button>
+        <button id="acheterTab" class="formTab" onclick="formTabs('mainForm', 'secondForm', 'acheterTab')">Acheter</button>
+        <button id="vendreTab" class="formTab" onclick="formTabs('secondForm', 'mainForm', 'vendreTab')">Vendre</button>
+      </div>
+      <div id="formContainer">
+        <form id="mainForm" class=" form animated">
+          <fieldset class="mainFieldset">
             <fieldset id="subField1">
-              <input id="villeInp" type="text" name="ville" placeholder="Saisissez une ville, un quartier ...">
+              <input class="villeInp" type="text" name="ville" placeholder="Saisissez une ville, un quartier ...">
               <input id="budgetInp" type="text" name="budget" placeholder="Budget max">
               <span id="euroSign">€</span>
             </fieldset>
@@ -64,17 +110,17 @@
             </fieldset>
             <a id="criteresBtn" href="">Plus de critères > </a>
           </fieldset>
-          <input id="searchBtn" type="submit" name="recherche" value="Rechercher">
+          <input class="searchBtn" type="submit" name="recherche" value="Rechercher">
         </form>
 
-        <form id="secondForm" class="animated">
-          <fieldset id="mainFieldset">
-              <h3>Estimez gratuitement votre bien</h3>
-              <input id="villeInp" type="text" name="ville" placeholder="Saisissez une ville, un quartier ...">
+        <form id="secondForm" class="form animated hidden">
+          <fieldset class="mainFieldset">
+            <h3>Estimez gratuitement votre bien</h3>
+            <input class="villeInp" type="text" name="ville" placeholder="Saisissez une ville, un quartier ...">
           </fieldset>
-          <input id="searchBtn" type="submit" name="recherche" value="Rechercher">
+          <input class="searchBtn" type="submit" name="recherche" value="Rechercher">
         </form>
-      <!-- </div> END formulaire principal -->
+      </div> <!-- END Formulaire principal -->
 
       <footer id="landingPage_footer">
         <p>
@@ -142,26 +188,26 @@
         <h2 id="conseil_h2">CONSEILS <br>ET INSPIRATIONS</h2>
         <h3 id="conseil_h3">Suivez le guide pour votre projet</h3>
       </div>
-      <div id="bgPic_container"><img id="bgPic" src="Img/background-pic.png"></div>
+      <div id="bgPic_container"><img id="bgPic" src="Img/background-pic.png" alt="bgpic"></div>
       <aside id="conseilsSection_aside" class="flex flexColumn">
         <div class="conseilCard">
           <h4>LIFESTYLE</h4>
           <figure class="flex flexColumn">
-            <img src="Img/maison_alternative.jpg">
+            <img src="Img/maison_alternative.jpg" alt="Maison Alternative">
             <figcaption>Yourte, container, maison flottante... Quel type d'habitat alternatif est fait pour vous ?</figcaption>
           </figure>
         </div>
         <div class="conseilCard">
           <h4>ACTUALITE</h4>
           <figure class="flex flexColumn">
-            <img src="Img/residence_etudiante_havre.jpg">
+            <img src="Img/residence_etudiante_havre.jpg" alt="Residence Etudiante">
             <figcaption>Résidences étudiantes : un marché porteur pour de nombreux investisseurs</figcaption>
           </figure>
         </div>
         <div class="conseilCard">
           <h4>CONSEIL D'EXPERT</h4>
           <figure class="flex flexColumn">
-            <img src="Img/porte-fracturee.jpg">
+            <img src="Img/porte-fracturee.jpg" alt="Porte Fracturée">
             <figcaption>Vous êtes locataire et votre porte a été fracturée. Que faire ?</figcaption>
           </figure>
         </div>
@@ -175,18 +221,13 @@
   <footer>
     <section id="preFooter" class="flex flexColumn justifyCenter">
       <p>SeLoger c'est aussi ...</p>
-      <nav id="preFooter_nav">
-        <ul class="flex spaceBtw alignItemsCenter">
-          <li id="preFooter_previous" class="selfCenter" ><i class="fa fa-angle-left" aria-hidden="true"></i></li>
-          <li><a href=""><img src="Img/agites.svg" ></a></li>
-          <li><a href=""><img src="Img/agorabiz.svg" ></a></li>
-          <li><a href=""><img src="Img/bellesdemeures-black.svg" ></a></li>
-          <li><a href=""><img src="Img/immostreet.svg" ></a></li>
-          <li><a href=""><img src="Img/seloger-neuf-B.svg" ></a></li>
-          <li><a href=""><img src="Img/webimm.svg" ></a></li>
-          <li id="preFooter_next" class="selfCenter"><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+      <div class="slider flex justifyCenter alignItemsCenter">
+        <i id="preFooter_previous" class="fa fa-angle-left sliderBtn selfCenter" aria-hidden="true" onclick="slider()"></i>
+        <ul id="sliderList" class="flex alignItemsCenter animated">
+          
         </ul>
-      </nav>
+        <i id="preFooter_next" class="fa fa-angle-right sliderBtn selfCenter" aria-hidden="true" onclick="slider()"></i>
+      </div>
     </section>
 
     <section id="mainFooter">
